@@ -6,108 +6,131 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>869</width>
-    <height>654</height>
+    <width>861</width>
+    <height>650</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QGraphicsView" name="graphicsView">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>10</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="textOutput">
+   <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>380</y>
-      <width>571</width>
-      <height>231</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtCmd">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
       <y>10</y>
-      <width>391</width>
-      <height>26</height>
+      <width>841</width>
+      <height>631</height>
      </rect>
     </property>
-    <property name="text">
-     <string>-sn</string>
+    <property name="currentIndex">
+     <number>0</number>
     </property>
-   </widget>
-   <widget class="QPushButton" name="btnGo">
-    <property name="geometry">
-     <rect>
-      <x>540</x>
-      <y>10</y>
-      <width>41</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Go</string>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="listOutput">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>571</width>
-      <height>331</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>11</x>
-      <y>14</y>
-      <width>41</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Flags</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>448</x>
-      <y>14</y>
-      <width>41</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Rows</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtRows">
-    <property name="geometry">
-     <rect>
-      <x>490</x>
-      <y>10</y>
-      <width>41</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>5</string>
-    </property>
+    <widget class="QWidget" name="tab1">
+     <attribute name="title">
+      <string>Control</string>
+     </attribute>
+     <widget class="QTextEdit" name="textOutput">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>350</y>
+        <width>571</width>
+        <height>231</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="listOutput">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>571</width>
+        <height>301</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>21</x>
+        <y>14</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Flags</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>458</x>
+        <y>14</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Rows</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnGo">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>10</y>
+        <width>41</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Go</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtCmd">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>10</y>
+        <width>391</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>-sn</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtRows">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>10</y>
+        <width>41</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab2">
+     <attribute name="title">
+      <string>Graph</string>
+     </attribute>
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>817</width>
+        <height>581</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
  </widget>

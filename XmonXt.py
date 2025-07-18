@@ -7,8 +7,9 @@ Module implementing MainWindow.
 import os
 import subprocess
 
+import pyqtgraph as pg
 from PyQt6.QtCore import pyqtSlot
-from PyQt6.QtWidgets import QMainWindow
+from PyQt6.QtWidgets import QMainWindow,  QGraphicsScene
 
 from Ui_Xmon import Ui_MainWindow
 
@@ -51,7 +52,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.listOutput.addItem(shellRow.decode('utf-8').strip())
             shellText += shellRow.decode('utf-8')
                     
-        self.textOutput.setText(shellText)
+            self.textOutput.setText(shellText)
+            
+            scene = QGraphicsScene()
+            self.graphicsView.setScene(scene)
+            self.plot_graph = pg.PlotWidget()
+#            self.setCentralWidget(self.plot_graph)
+            minutes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            temperature = [30, 32, 34, 32, 33, 31, 29, 32, 35, 30]
+            plot_item = self.plot_graph.plot(minutes, temperature)
+            proxy_widget = scene.addWidget(self.plot_graph)
+
       
 
 

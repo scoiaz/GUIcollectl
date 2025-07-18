@@ -22,7 +22,7 @@ class Ui_MainWindow(object):
         self.textOutput.setGeometry(QtCore.QRect(10, 380, 571, 231))
         self.textOutput.setObjectName("textOutput")
         self.txtCmd = QtWidgets.QLineEdit(parent=self.centralWidget)
-        self.txtCmd.setGeometry(QtCore.QRect(10, 10, 521, 26))
+        self.txtCmd.setGeometry(QtCore.QRect(50, 10, 391, 26))
         self.txtCmd.setObjectName("txtCmd")
         self.btnGo = QtWidgets.QPushButton(parent=self.centralWidget)
         self.btnGo.setGeometry(QtCore.QRect(540, 10, 41, 26))
@@ -30,6 +30,15 @@ class Ui_MainWindow(object):
         self.listOutput = QtWidgets.QListWidget(parent=self.centralWidget)
         self.listOutput.setGeometry(QtCore.QRect(10, 40, 571, 331))
         self.listOutput.setObjectName("listOutput")
+        self.label = QtWidgets.QLabel(parent=self.centralWidget)
+        self.label.setGeometry(QtCore.QRect(11, 14, 41, 20))
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(parent=self.centralWidget)
+        self.label_2.setGeometry(QtCore.QRect(448, 14, 41, 20))
+        self.label_2.setObjectName("label_2")
+        self.txtRows = QtWidgets.QLineEdit(parent=self.centralWidget)
+        self.txtRows.setGeometry(QtCore.QRect(490, 10, 41, 26))
+        self.txtRows.setObjectName("txtRows")
         MainWindow.setCentralWidget(self.centralWidget)
 
         self.retranslateUi(MainWindow)
@@ -40,6 +49,9 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.txtCmd.setText(_translate("MainWindow", "-sn"))
         self.btnGo.setText(_translate("MainWindow", "Go"))
+        self.label.setText(_translate("MainWindow", "Flags"))
+        self.label_2.setText(_translate("MainWindow", "Rows"))
+        self.txtRows.setText(_translate("MainWindow", "5"))
 
 
 if __name__ == "__main__":

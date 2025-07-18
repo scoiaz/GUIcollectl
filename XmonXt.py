@@ -35,25 +35,23 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """
        
         command = 'collectl'
-        paramCount = 4
+        paramCount = int(self.txtRows.text())
         appParams = "-c" + str(paramCount)
         cliParams = self.txtCmd.text()
 #        shellProcess = subprocess.Popen( ["ls","-lisa"], stdout = subprocess.PIPE )
         shellProcess = subprocess.Popen( [command, appParams,  cliParams], stdout = subprocess.PIPE )
         shellQ = shellProcess.stdout.readlines()
-        print(type(shellQ))
-        shellText = str(shellQ[2]) + "\n"
+        print(type(shellQ[2]))
+        shellText = shellQ[2].decode('utf-8')
+#        shellText = str(shellQ[2]) + "\n"
         for shellRow in shellQ[3:len(shellQ)]:
 #            Row = shellRow.splitlines()
-            Row = str(shellRow)
-            self.listOutput.addItem(Row)
-            shellText += Row + "\n"
+#            Row = str(shellRow)
+            print(shellRow.decode('utf-8'))
+            self.listOutput.addItem(shellRow.decode('utf-8').strip())
+            shellText += shellRow.decode('utf-8')
                     
         self.textOutput.setText(shellText)
       
 
 
-class collectNet():
-    
-    def getCollectl(self):
-        
